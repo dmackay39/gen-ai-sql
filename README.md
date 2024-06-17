@@ -11,7 +11,7 @@ In this project:
 - OpenAI API key
 
 # How to run with Docker
-- Create a file called .env in /sql-gen-ai and add the property OPENAI_API_KEY= with your api key.
+- Create a file called .env in sql-gen-ai/ and add the property OPENAI_API_KEY= with your api key.
 - Open Docker desktop so the Docker engine is running.
 - In terminal, cd to root folder (gen-ai-sql) and run docker compose up.
 - Open the app on localhost:8501.
