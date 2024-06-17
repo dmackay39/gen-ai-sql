@@ -1,0 +1,26 @@
+version: '3.8'
+
+networks:
+  default:
+
+services:
+  python:
+    build: 
+      context: ./sql-gen-ai
+    ports:
+      - "8501:8501"
+    depends_on:
+      - postgres
+    env_file:
+      - ./sql-gen-ai/.env
+  
+
+  postgres:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: py_database
+      POSTGRES_USER: pyuser
+      POSTGRES_PASSWORD: pyuser
+      PGPASSWORD: pyuser
+    ports:
+      - "5432:5432"
